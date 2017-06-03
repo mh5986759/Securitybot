@@ -117,7 +117,7 @@ local function banall_by_reply(extra, success, result)
 	end
 		banall_user(result.from.peer_id)
 		send_large_msg(chat, "User "..result.from.peer_id.." Golobally Banned")
-		send_large_msg(channel, "><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityBOT ] <i> مسدود شد </i>\n><i> شناسه کاربری: </i> [<b>"..result.from.peer_id.."</b>]")
+		send_large_msg(channel, "><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityGPBOT ] <i> مسدود شد </i>\n><i> شناسه کاربری: </i> [<b>"..result.from.peer_id.."</b>]")
 	else
 		return
 	end
@@ -135,12 +135,12 @@ local function unbanall_by_reply(extra, success, result)
 		return
 	end
      if not is_gbanned(result.from.peer_id) then
-       return '><i> کاربر مورد نظر در لیست مسدودیت دائمی ربات </i> [ @TGSecurityBOT ] <i> قرار ندارد </i>\n><i> شناسه کاربری: </i> [<b>'..result.from.peer_id..'</b>]'
+       return '><i> کاربر مورد نظر در لیست مسدودیت دائمی ربات </i> [ @TGSecurityGPBOT ] <i> قرار ندارد </i>\n><i> شناسه کاربری: </i> [<b>'..result.from.peer_id..'</b>]'
       end
 	  if is_gbanned(result.from.peer_id) then
 		unbanall_user(result.from.peer_id)
 		send_large_msg(chat, "User "..result.from.peer_id.." Golobally un-Banned")
-		send_large_msg(channel, "><i> کاربر مورد نظر در لیست مسدودیت دائمی ربات </i> [ @TGSecurityBOT ] <i> قرار ندارد </i>\n><i> شناسه کاربری: </i> [<b>"..result.from.peer_id.."</b>]")
+		send_large_msg(channel, "><i> کاربر مورد نظر در لیست مسدودیت دائمی ربات </i> [ @TGSecurityGPBOT ] <i> قرار ندارد </i>\n><i> شناسه کاربری: </i> [<b>"..result.from.peer_id.."</b>]")
 	end
 	end
 end
@@ -203,11 +203,11 @@ local function kick_ban_res(extra, success, result)
         redis:srem(hash, member_id)
         return '><i> دسترسی کاربر برای ورود به گروه بازگردانده شد </i> \n<i> شناسه کاربری: </i>: ['..user_id..' ]'
       elseif get_cmd == 'banall' then
-        send_large_msg(receiver, '><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityBOT ] <i> مسدود شد </i>\n><i> یوزرنیم: </i> [@'..member..']\n><i> شناسه کاربری: </i> [<b>'..member_id..'</b>]')
+        send_large_msg(receiver, '><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityGPBOT ] <i> مسدود شد </i>\n><i> یوزرنیم: </i> [@'..member..']\n><i> شناسه کاربری: </i> [<b>'..member_id..'</b>]')
 		banall_user(member_id)
 		kick_user(member_id, msg.to.id)
       elseif get_cmd == 'unbanall' then
-        send_large_msg(receiver, '><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityBOT ] <i> بازگردانده شد </i> \n><i> یوزرنیم: </i> [@'..member..']\n><i> شناسه کاربری: </i> [<b>'..member_id..'</b>]')
+        send_large_msg(receiver, '><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityGPBOT ] <i> بازگردانده شد </i> \n><i> یوزرنیم: </i> [@'..member..']\n><i> شناسه کاربری: </i> [<b>'..member_id..'</b>]')
 	    unbanall_user(member_id)
     end
 end
@@ -382,7 +382,7 @@ end
         savelog(msg.to.id, name.." ["..msg.from.id.."] banedall user ".. matches[2])
         banall_user(matches[2])
 		 kick_user(matches[2], msg.to.id)
-		send_large_msg(receiver, '><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityBOT ] <i> مسدود شد </i> \n><i> شناسه کاربری: </i> [<b>'..matches[2]..'</b>]')
+		send_large_msg(receiver, '><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityGPBOT ] <i> مسدود شد </i> \n><i> شناسه کاربری: </i> [<b>'..matches[2]..'</b>]')
 		send_document("channel#id"..msg.to.id, "/root/TeleSeed/userinfo/ban.webp", ok_cb, false)
       else
 		local cbres_extra = {
@@ -418,7 +418,7 @@ end
 		local receiver = get_receiver(msg)
         savelog(msg.to.id, name.." ["..msg.from.id.."] unbanedall user ".. matches[2])
         unbanall_user(matches[2])
-		send_large_msg(receiver, '><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityBOT ] <i> بازگردانده شد </i> \n><i> شناسه کاربری: </i> [<b>'..matches[2]..'</b>]')
+		send_large_msg(receiver, '><i> دسترسی کاربر برای ورود به تمامی گروه های ربات </i> [ @TGSecurityGPBOT ] <i> بازگردانده شد </i> \n><i> شناسه کاربری: </i> [<b>'..matches[2]..'</b>]')
      send_document("channel#id"..msg.to.id, "/root/TeleSeed/userinfo/unban.webp", ok_cb, false)
 	 else
 		local cbres_extra = {
