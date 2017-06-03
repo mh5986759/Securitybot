@@ -3,7 +3,7 @@ local function run(msg, matches)
 		if matches[1]:lower() == 'infome' and not msg.reply_id then
 		local user_id = msg.from.id
     local chat_id = get_receiver(msg)
-    local token = "توکن ربات"
+    local token = "275649365:AAHBkmyUUZXY7iusQ5r-mzqj4TiOCh8FQ3U"
     local db = 'https://api.telegram.org/bot'..token..'/getUserProfilePhotos?user_id='..user_id
     local path = 'https://api.telegram.org/bot'..token..'/getFile?file_id='
     local img = 'https://api.telegram.org/file/bot'..token..'/'
@@ -11,7 +11,7 @@ local function run(msg, matches)
     local jdat = json:decode(res)
     local fileid = ''
     local count = jdat.result.total_count
-  local bot = 'شناسه ربات'
+  local bot = '275649365'
   if jdat.result.total_count == 0 then
       send_photo(chat_id,photos,ok_cb,false)
          else
