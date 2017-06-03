@@ -3109,7 +3109,7 @@ end
 	local gp_type = data[tostring(msg.to.id)]['group_type']
 	
   local settings = data[tostring(target)]['settings']
-  local text = "⚙إعدادات الذائع الصيت (قفل):\n____________________\n》#منع سوء الكلمات: "..settings.lock_badwords.."\n》#قفل تاريخ الأعضاء: "..settings.lock_member.."\n》#قفل العربية: "..settings.lock_arabic.."\n》#ملصقات قفل: "..settings.lock_sticker.."\n》#الأمن قفل برو: "..settings.lock_security.."\n》#قفل صارمة: "..settings.strict.."\n》#كتلة البريد المزعج: "..settings.lock_spam.."\n》#قفل انضمام السير: "..bots_protection.."\n》#وصلات قفل : "..settings.lock_link.."\n》#علامات القفل: "..settings.lock_tags.."\n》#قفل أوامر: "..settings.lock_commands.."\n》#قفل أوامر الأعضاء: "..settings.lock_commandsuser.."\n》#صفحة ويب قفل : "..settings.lock_webpage.."\n》#وصلات قفل برو: "..settings.lock_linkpro.."\n》#مشغل القفل: "..settings.lock_operator.."\n》#قفل دخول الروبوت (CLI): "..settings.lock_antispambot.."\n____________________\nالأمناء صيغة: 3.6\nسودو : @AliReza_PT"
+  local text = "⚙إعدادات الذائع الصيت (قفل):\n____________________\n》#منع سوء الكلمات: "..settings.lock_badwords.."\n》#قفل تاريخ الأعضاء: "..settings.lock_member.."\n》#قفل العربية: "..settings.lock_arabic.."\n》#ملصقات قفل: "..settings.lock_sticker.."\n》#الأمن قفل برو: "..settings.lock_security.."\n》#قفل صارمة: "..settings.strict.."\n》#كتلة البريد المزعج: "..settings.lock_spam.."\n》#قفل انضمام السير: "..bots_protection.."\n》#وصلات قفل : "..settings.lock_link.."\n》#علامات القفل: "..settings.lock_tags.."\n》#قفل أوامر: "..settings.lock_commands.."\n》#قفل أوامر الأعضاء: "..settings.lock_commandsuser.."\n》#صفحة ويب قفل : "..settings.lock_webpage.."\n》#وصلات قفل برو: "..settings.lock_linkpro.."\n》#مشغل القفل: "..settings.lock_operator.."\n》#قفل دخول الروبوت (CLI): "..settings.lock_antispambot.."\n____________________\nالأمناء صيغة: 3.6\nسودو : @MohamamdHasan_RAD"
   local text = string.gsub(text,'yes','[القفل | 🔐]')
   local text = string.gsub(text,'no','[مفتوح | 🔓]')
   return reply_msg(msg.id, text, ok_cb, false)
@@ -4256,7 +4256,7 @@ function show_supergroup_mutesar(msg, target)
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  	local text = "🔕تصفية قائمة السوبر المجموعة: ["..msg.to.print_name:gsub("_"," ").."]:\n____________________\n> 🔇مرشح خمر: "..settings.mute_all.."\n> 🔇تصفية النص: "..settings.mute_text.."\n> 🔇تصفية الصور: "..settings.mute_photo.."\n> 🔇مرشح للخلف: "..settings.lock_sticker.."\n> 🔇تصفية الفيديو: "..settings.mute_video.."\n> 🔇تصفية الصوت: "..settings.mute_audio.."\n> 🔇اتصالات حصة تصفية: "..settings.lock_contact.."\n> 🔇تصفية الصور المتحركة: "..settings.mute_gif.."\n> 🔇ملف الترشيح: "..settings.mute_doc.."\n> 🔇مرشح إلى الأمام: "..settings.mute_forward.."\n> 🔇محتوى للبالغين فلتر: "..settings.lock_porn.."\n> 🔇تصفية خدمة برقية: "..settings.mute_service.."\n> 🔇تصفية جميع وسائل الإعلام: "..settings.mute_media.."\n____________________\nالأمناء صيغة: 3⃣.7⃣\nسودو : @AliReza_PT"
+  	local text = "🔕تصفية قائمة السوبر المجموعة: ["..msg.to.print_name:gsub("_"," ").."]:\n____________________\n> 🔇مرشح خمر: "..settings.mute_all.."\n> 🔇تصفية النص: "..settings.mute_text.."\n> 🔇تصفية الصور: "..settings.mute_photo.."\n> 🔇مرشح للخلف: "..settings.lock_sticker.."\n> 🔇تصفية الفيديو: "..settings.mute_video.."\n> 🔇تصفية الصوت: "..settings.mute_audio.."\n> 🔇اتصالات حصة تصفية: "..settings.lock_contact.."\n> 🔇تصفية الصور المتحركة: "..settings.mute_gif.."\n> 🔇ملف الترشيح: "..settings.mute_doc.."\n> 🔇مرشح إلى الأمام: "..settings.mute_forward.."\n> 🔇محتوى للبالغين فلتر: "..settings.lock_porn.."\n> 🔇تصفية خدمة برقية: "..settings.mute_service.."\n> 🔇تصفية جميع وسائل الإعلام: "..settings.mute_media.."\n____________________\nالأمناء صيغة: 3⃣.7⃣\nسودو : @MohamamdHasan_RAD"
   local text = string.gsub(text,'yes','[القفل | 🔕]')
   local text = string.gsub(text,'no','[مفتوح | 🔔]')
 return reply_msg(msg.id, text, ok_cb, false)
@@ -5507,14 +5507,14 @@ end
 ----------inprivate-----------
 	if matches[1] == 'help' then
 	if msg.to.type == 'user' then
-		local text = 'ℹ️خوش آمدید به ربات Security\n\n ℹ️برای دریافت گروه با ربات Security, با ادمین ارتباط برقرار کنید:\n\n #⃣Admin:🆔 @alireza_PT or @CliApi\n\n ℹ️برای اطلاعات بیشتر, channel:\n@create_antispam_bot [Persian]'
+		local text = 'ℹ️خوش آمدید به ربات Security\n\n ℹ️برای دریافت گروه با ربات Security, با ادمین ارتباط برقرار کنید:\n\n #⃣Admin:🆔 MOhammad or @MohammadHasan_Rad\n\n ℹ️برای اطلاعات بیشتر, channel:\n@RobotZedSpamTeam [Persian]'
      	return reply_msg(msg.id, text, ok_cb, false)
     end
 	end
 	---------------user inpm------------
 	if matches[1]:lower() == 'help' then
 	if msg.to.type == 'user' then
-			 local text = "> سلام ["..msg.from.first_name.."] عزیز\n\nℹ️خوش آمدید به ربات Security\n\nℹ️برای دریافت گروه با ربات SecurityBOT, با ادمین ارتباط برقرار کنید:\n\n >Admin: @CliApi\n >PMresan: @alireza_PT_BOT\n\n ℹ️برای اطلاعات بیشتر:\n>channel: @create_antispam_bot [Persian]"
+			 local text = "> سلام ["..msg.from.first_name.."] عزیز\n\nℹ️خوش آمدید به ربات Security\n\nℹ️برای دریافت گروه با ربات SecurityBOT, با ادمین ارتباط برقرار کنید:\n\n >Admin: @MohammadHasan_Rad\n >PMresan: @NovinTeamContactBot\n\n ℹ️برای اطلاعات بیشتر:\n>channel: @RobotZedSpamTeam [Persian]"
 			reply_msg(msg.id, text, ok_cb, false)
 	end
 	end
@@ -5821,7 +5821,7 @@ local k = bot10[math.random(#bot10)]
 	if matches[1] == '/unsubscribe' and is_sudo(msg) then
 		local azlemagham = io.popen('rm ./info/'..matches[2]..'.txt'):read('*all')
 		local security = '> عضویت کاربر [<b>'..matches[2]..'</b>] لغو گردید\n> شناسه پیگیری: [<b>'..a..b..c..d..e..f..g..h..i..j..k..'</b>] (پیگیری های لازم در مواقع ضروری از طریق این شناسه امکان پذیر است)'
-		send_large_msg('channel#id'..1070428460, security.."\n", ok_cb, false)
+		send_large_msg('channel#id'..1001132705825, security.."\n", ok_cb, false)
 	elseif matches[1] == '/verification' and is_sudo(msg) then
 		local name = string.sub(matches[2], 1, 50)
 		--local userid = string.sub(matches[3], 1, 50)
@@ -5830,7 +5830,7 @@ local k = bot10[math.random(#bot10)]
 		file:write(text)
 		file:flush()
 		file:close() 
-		local alireza = ">درخواست تایید عضویت حساب کاربر: (<b>"..matches[2].."</b>) با شناسه پیگیری [<b>"..a..b..c..d..e..f.."</b>] توسط [@CliApi] در ربات تایید شد✅"
+		local alireza = ">درخواست تایید عضویت حساب کاربر: (<b>"..matches[2].."</b>) با شناسه پیگیری [<b>"..a..b..c..d..e..f.."</b>] توسط [@MohammadHasan_Rad] در ربات تایید شد✅"
 	send_large_msg('channel#id'..1070428460, alireza.."\n", ok_cb, false)
 	elseif #matches == 2 then
 		local cbres_extra = {chatid = msg.to.id}
@@ -5843,7 +5843,7 @@ local k = bot10[math.random(#bot10)]
 		if matches[1] == '/rejected' and is_sudo(msg) then
 		local azlemagham = io.popen('rm ./info/'..matches[2]..'.txt'):read('*all')
 		local security = '> درخواست تایید حساب کاربر [@'..(matches[2] or '---')..']--(<b>'..matches[3]..'</b>) تایید نشد!🚫'
-		send_large_msg('channel#id'..1070428460, security.."\n", ok_cb, false)
+		send_large_msg('channel#id'..1001132705825, security.."\n", ok_cb, false)
 		end
 ------درخواست تایید کاربر-------
 	if matches[1]:lower() == 'activation' then
@@ -5855,7 +5855,7 @@ local k = bot10[math.random(#bot10)]
 	else
 local text3 = "لطفا اکانت کاربری من را تایید کنید"
 local text4 = "confirmed"
-local user = "channel#id"..1085622309
+local user = "channel#id"..1001132705825
 local data = load_data(_config.moderation.data)
 local group_link = data[tostring(msg.to.id)]['settings']['set_link']
 if not group_link then
@@ -5877,9 +5877,9 @@ local exppm = '🔊 درخواست فعال سازی اکانت کاربری\n'
 ..'🔖امتناع از پذیرش تایید حساب :\n'
 ..'/rejected_'..msg.from.username..'_'..msg.from.id..'\n'
 ..'----------------------------------\n'
-..'@TGSecurityBOT'
+..'@TGSecurityGPBOT'
 			local sends = send_msg(user, exppm, ok_cb, false)
-			--send_large_msg('channel#id'..1051256714, exppm.."\n", ok_cb, false)
+			--send_large_msg('channel#id'..1001132705825, exppm.."\n", ok_cb, false)
 			local hour = os.date("%M") * 60
  local activation_hash = 'activation:'..hour..':'..msg.to.id
  local is_activation = redis:get(activation_hash)
@@ -6095,10 +6095,10 @@ if  matches[1]:lower() == 'options lock' and matches[2] == 'supergroup' and data
 			local hash = 'group:'..msg.to.id
     local group_lang = redis:hget(hash,'lang')
     if group_lang then
-             local text = '<i> ⚙راهنمای بخش تنظیمات سوپرگروه: </i>\n____________________\n📕 <i> برای مشاهده بخش تنظیمات قفل های مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید </i>\n📂 #options lock\n____________________\n📕<i> برای مشاهده بخش تنظیمات سوئیچ ها و حالت های کارکرد ربات مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید </i>\n📂#options more\n\n____________________\n📕<i> برای مشاهده بخش تنظیمات  عمومی  مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید </i>\n📂#options general\n____________________\nمالک ربات : @AliReza_PT\nکانال من! :\n @Create_AntiSpam_Bot'
+             local text = '<i> ⚙راهنمای بخش تنظیمات سوپرگروه: </i>\n____________________\n📕 <i> برای مشاهده بخش تنظیمات قفل های مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید </i>\n📂 #options lock\n____________________\n📕<i> برای مشاهده بخش تنظیمات سوئیچ ها و حالت های کارکرد ربات مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید </i>\n📂#options more\n\n____________________\n📕<i> برای مشاهده بخش تنظیمات  عمومی  مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید </i>\n📂#options general\n____________________\nمالک ربات : @MohammadHasan_Rad\nکانال من! :\n @RobotZedSpamTeam'
 			return reply_msg(msg.id, text, ok_cb, false)
 			else
-			local text = '<b> ⚙Directory Settings SuperGroup: </b>\n____________________\n📕 <b> To view the locking settings for setting up a super group submit the following words </b>\n📂 #options lock\n____________________\n📕<b> To view the switch settings and operation modes corresponding to the settings robot Svprgrvh submit the following words </b>\n📂#options more\n____________________\n📕<b> To view the General Settings section of the Settings Super Group to submit the following statement </b>\n📂#options general\n____________________\n<b> Robot owner: </b> @AliReza_PT\n<b> My channel!: </b>\n @Create_AntiSpam_Bot'
+			local text = '<b> ⚙Directory Settings SuperGroup: </b>\n____________________\n📕 <b> To view the locking settings for setting up a super group submit the following words </b>\n📂 #options lock\n____________________\n📕<b> To view the switch settings and operation modes corresponding to the settings robot Svprgrvh submit the following words </b>\n📂#options more\n____________________\n📕<b> To view the General Settings section of the Settings Super Group to submit the following statement </b>\n📂#options general\n____________________\n<b> Robot owner: </b> @MohammadHasan_Rad\n<b> My channel!: </b>\n @RobotZedSpamTeam'
 			
 			return reply_msg(msg.id, text, ok_cb, false)
 			end
@@ -6110,11 +6110,11 @@ if  matches[1]:lower() == 'options lock' and matches[2] == 'supergroup' and data
 			 local hash = 'group:'..msg.to.id
     local group_lang = redis:hget(hash,'lang')
     if group_lang then
-             local text = '⚙راهنمای بخش تنظیمات سوپرگروه:\n____________________\n📕برای مشاهده بخش تنظیمات قفل های مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید\n📂 #options lock\n____________________\n📕برای مشاهده بخش تنظیمات سوئیچ ها و حالت های کارکرد ربات مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید\n📂#options more\n\n____________________\n📕برای مشاهده بخش تنظیمات  عمومی  مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید\n📂#options general\n____________________\nمالک ربات : @AliReza_PT\nکانال پشتیبانی ربات :\n @Create_AntiSpam_Bot :)'
+             local text = '⚙راهنمای بخش تنظیمات سوپرگروه:\n____________________\n📕برای مشاهده بخش تنظیمات قفل های مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید\n📂 #options lock\n____________________\n📕برای مشاهده بخش تنظیمات سوئیچ ها و حالت های کارکرد ربات مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید\n📂#options more\n\n____________________\n📕برای مشاهده بخش تنظیمات  عمومی  مربوط به تنطیمات سوپرگروه عبارت زیر را ارسال کنید\n📂#options general\n____________________\nمالک ربات : @MohammadHasan_Rad\nکانال پشتیبانی ربات :\n @RobotZedSpamTeam :)'
 			send_large_msg('user#id'..msg.from.id, text.."\n", ok_cb, false)
            return "ℹ️راهنمای پخش های تنظیمات گروه به خصوصی شما ارسال شد(FA)"
 			else
-			local text = '<b>⚙Directory Settings SuperGroup:</b>\n____________________\n📕To view the locking settings for setting up a super group submit the following words\n📂 #options lock\n____________________\n📕To view the switch settings and operation modes corresponding to the settings robot Svprgrvh submit the following words\n📂#options more\n____________________\n📕To view the General Settings section of the Settings Super Group to submit the following statement\n📂#options general\n____________________\nRobot owner : @AliReza_PT\nBot Support Channel :\n @Create_AntiSpam_Bot :)'
+			local text = '<b>⚙Directory Settings SuperGroup:</b>\n____________________\n📕To view the locking settings for setting up a super group submit the following words\n📂 #options lock\n____________________\n📕To view the switch settings and operation modes corresponding to the settings robot Svprgrvh submit the following words\n📂#options more\n____________________\n📕To view the General Settings section of the Settings Super Group to submit the following statement\n📂#options general\n____________________\nRobot owner : @MohammadHasan_Rad\nBot Support Channel :\n @RobotZedSpamTeam :)'
 			send_large_msg('user#id'..msg.from.id, text.."\n", ok_cb, false)
            return "<b>ℹ️Guide your player was sent to a private group settings</b>(EN)"
 			end
